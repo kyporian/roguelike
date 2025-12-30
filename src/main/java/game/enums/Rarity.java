@@ -32,4 +32,10 @@ public enum Rarity {
     public int getGoldBasePrice() {
         return goldBasePrice;
     }
+
+    public Rarity upgradeRarity() {
+        Rarity[] values = values();
+        int next = this.ordinal();
+        return next < values.length ? values[next] : null;
+    }
 }
