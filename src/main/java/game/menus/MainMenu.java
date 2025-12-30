@@ -14,7 +14,7 @@ public class MainMenu implements Menu {
         System.out.println();
         System.out.println("=== Main Menu ===");
         System.out.println("Inventory");
-        System.out.println("Fight");
+        System.out.println("Travel");
         System.out.println("Map");
         System.out.println("Settings");
         System.out.println("Quit");
@@ -26,9 +26,8 @@ public class MainMenu implements Menu {
             case "inv", "inventory" -> {
                 return new InventoryMenu(user);
             }
-            case "fight" -> {
-                //return new FightMenu();
-                return this;
+            case "travel" -> {
+                return new TravelMenu(user);
             }
             case "map", "settings" -> {
                 System.out.println("Not done yet :^)");
